@@ -1,7 +1,7 @@
 ---------------------------Build--------------------------------------------------------
-the solution is build via VS2008, so it could be build in VS.
+the solution is built via Visual Studio 2008, using .net 3.5 framework.
 
-or click builc.cmd to build it, before doing that, 
+click build.cmd to build it, before doing that, 
 1,ensure Ruby 1.9.2 is installed.
 2,ensure albocore 0.2.2 is installed, you can click installGem.bat to install it.
 
