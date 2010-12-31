@@ -22,10 +22,10 @@ namespace SalesTaxes.Core
             var levier = new Levier();
 
             if (taxable.IsImported)
-                levier.AddTaxer(new Taxer(Imported_TaxRate, RoundTax));
+                levier.AddTaxer(new TaxItem(Imported_TaxRate, RoundTax));
 
             var basicTaxType = basicTaxTypes.FindByCategory(taxable.Category);
-            levier.AddTaxer(new Taxer(basicTaxType.TaxRate, RoundTax));
+            levier.AddTaxer(new TaxItem(basicTaxType.TaxRate, RoundTax));
 
             return levier;
         }

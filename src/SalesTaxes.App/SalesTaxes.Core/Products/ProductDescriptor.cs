@@ -2,6 +2,9 @@ using System;
 
 namespace SalesTaxes.Core
 {
+    /// <summary>
+    /// encapsulates name, applicable units, productCategory etc.
+    /// </summary>
     public class ProductDescriptor
     {
         public ProductDescriptor(string name)

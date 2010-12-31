@@ -60,7 +60,7 @@
     <Compile Include="SalesOrders\SalesOrder.cs" />
     <Compile Include="Taxes\Levier.cs" />
     <Compile Include="Taxes\LevierFactory.cs" />
-    <Compile Include="Taxes\Taxer.cs" />
+    <Compile Include="Taxes\TaxItem.cs" />
     <Compile Include="Taxes\TaxService.cs" />
     <Compile Include="Products\Unit.cs" />
     <Compile Include="Products\UnitList.cs" />

@@ -14,7 +14,7 @@ namespace SalesTaxes.UnitTest.Core
         {
             var levierSut = new Levier();
 
-            levierSut.AddTaxer(CreateStubTaxer(0));
+            levierSut.AddTaxer(CreateStubTaxItem(0));
 
             Assert.AreEqual(1, levierSut.TaxerCount());
         }
@@ -34,17 +34,17 @@ namespace SalesTaxes.UnitTest.Core
             const decimal tax2 = 0.5m;
 
             var levierSut = new Levier();
-            levierSut.AddTaxer(CreateStubTaxer(tax1));
-            levierSut.AddTaxer(CreateStubTaxer(tax2));
+            levierSut.AddTaxer(CreateStubTaxItem(tax1));
+            levierSut.AddTaxer(CreateStubTaxItem(tax2));
 
             var totalTax = levierSut.CalculateTax(PreTaxAmount);
 
             Assert.AreEqual(tax1 + tax2, totalTax);
         }
 
-        private static Taxer CreateStubTaxer(decimal returnedTax)
+        private static TaxItem CreateStubTaxItem(decimal returnedTax)
         {
-            var stub = new Mock<Taxer>(null, null);
+            var stub = new Mock<TaxItem>(null, null);
             stub.Setup(x => x.CalculateTax(PreTaxAmount)).Returns(returnedTax);
 
             return stub.Object;

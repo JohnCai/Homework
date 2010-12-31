@@ -2,6 +2,9 @@ using System;
 
 namespace SalesTaxes.Core
 {
+    /// <summary>
+    /// product, or "sale item" from retailer, encapsulates purchaseItem and SaleUnit, (preTax)Price etc.
+    /// </summary>
     public class Product : IProduct
     {
         public Product(PurchaseItem purchaseItem)

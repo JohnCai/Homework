@@ -5,11 +5,11 @@ namespace SalesTaxes.Core
 {
     public class Levier
     {
-        private readonly IList<Taxer> _taxers = new List<Taxer>();
+        private readonly IList<TaxItem> _taxers = new List<TaxItem>();
 
-        public void AddTaxer(Taxer taxer)
+        public void AddTaxer(TaxItem taxItem)
         {
-            _taxers.Add(taxer);
+            _taxers.Add(taxItem);
         }
 
         public decimal CalculateTax(decimal preTaxAmount)

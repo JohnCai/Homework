@@ -2,6 +2,9 @@ using System;
 
 namespace SalesTaxes.Core
 {
+    /// <summary>
+    /// encapulates a productDescriptor, purchase Unit and information about imported or not.
+    /// </summary>
     public class PurchaseItem
     {
         public PurchaseItem(ProductDescriptor productDescriptor)
